@@ -1,0 +1,42 @@
+.round {
+  border-radius: 50% 60% 60% 50% / 40% 20% 80% 40%;
+  background-color: cadetblue;
+  height: 330px;
+  width: 350px;
+}
+
+.round img {
+  border-radius: 20%;
+}
+
+@media (max-width: 768px) {
+  .round {
+    height: 230px;
+    width: 240px;
+  }
+}
+
+@media (max-width: 576px) {
+  .round {
+    height: 200px;
+    width: 220px;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-blink {
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
