@@ -4,7 +4,7 @@ import "./App.css";
 import img from "../src/images/35541.png";
 import hand from "../src/images/icon-1.webp";
 import player from "../src/images/play-button.png";
-import Home from "./Home";
+import Home from "./Service";
 import Pc from "./Footer";
 
 const App = () => {

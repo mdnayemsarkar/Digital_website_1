@@ -1,9 +1,9 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { redirect } from "react-router-dom";
 
-import App from "./App";
 import About from "./About";
-import Home from "./Home";
+import Service from "./Service";
+import App from "./App";
 
 function Routs() {
   const router = createBrowserRouter([
@@ -15,18 +15,11 @@ function Routs() {
     //   path: "/home",
     //   element: <Home />,
     // },
-    // {
-    //   path: "/about",
-    //   element: <About />,
-    // },
-    // {
-    //   path: "/about/contact",
-    //   element: <Contact />,
-    // },
-    // {
-    //   path: "/services",
-    //   element: <Services />,
-    // },
+   
+     {
+      path: "/service",
+      element: <Service />,
+    },
     // {
     //   path: "/contact",
     //   element: <Contact />,
