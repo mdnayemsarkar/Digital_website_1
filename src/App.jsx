@@ -1,13 +1,29 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
+import { gsap } from "gsap";
 import Header from "./Header";
 import "./App.css";
-import img from "../src/images/35541.png";
-import hand from "../src/images/icon-1.webp";
-import player from "../src/images/play-button.png";
+import img from "../public/images/35541.png";
+import hand from "../public/images/icon-1.webp";
+import player from "../public/images/play-button.png";
 import Home from "./Service";
 import Pc from "./Footer";
 
 const App = () => {
+  // for gsap
+  const myElementRef = useRef(null);
+  useEffect(() => {
+    const element = myElementRef.current;
+
+    gsap.from(element, {
+      opacity: 1,
+      scale: 0.5,
+      delay: 0.5,
+      duration: 1,
+      ease: "elastic.out(1, 0.75)",
+    });
+  }, []);
+
+  // for dynamic word
   const words = [
     "Dynamic website",
     "React Website",
@@ -40,7 +56,7 @@ const App = () => {
         <Header />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 h-screen mt-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 h-screen mt-10 overflow-hidden">
         <div className="round mt-32 ml-4 md:ml-10 lg:ml-44 relative">
           <img
             src={img}
@@ -61,7 +77,7 @@ const App = () => {
         </div>
 
         <div>
-          <div className="flex flex-col">
+          <div className="flex flex-col" >  
             <div className="flex mt-10">
               <img src={hand} alt="" />
               <p className="text-3xl pl-5 font-inconsolata">
@@ -106,7 +122,7 @@ const App = () => {
       <div className="h-screen w-screen grid grid-cols-2 bg-slate-400">
         <div>
           <img
-            src="../src/images/info-2.jpg"
+            src="../public/images/info-2.jpg"
             alt=""
             className="h-[32rem] relative top-32 left-24 rounded-xl shadow-2xl shadow-gray-50"
           />

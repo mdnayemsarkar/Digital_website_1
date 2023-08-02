@@ -1,4 +1,4 @@
-import img from "../src/images/info-2.jpg";
+import img from "../public/images/info-2.jpg";
 import Card from "./Card";
 import Sdata from "./Sdata";
 
